@@ -15,14 +15,16 @@ namespace PROGRAMACION_DE_APP_LOCALES_EJERCICIOS
             int opMenu;
 
             // VARIABLES OPCION 1
-            int valor1, valor2, _raiz;
+            int valor1, valor2, residuo;
 
             // VARIABLES OPCION 2
 
             int opArea = 0;
-            int lado, _base, areaCal, altura;
+            int lado, _base, areaCal, altura ;
+            double _pi = 3.14, radio, areaCalCir, areaCalRom ,diagonalA, diagonalB;
 
             // VARIABLES OPCION 3
+            int _raiz;
 
             // VARIABLES OPCION 4
 
@@ -46,8 +48,8 @@ namespace PROGRAMACION_DE_APP_LOCALES_EJERCICIOS
                     Console.WriteLine("Ingrese el segundo valor valo:");
                     valor2 = Convert.ToInt32(Console.ReadLine());
 
-                    _raiz = valor2 % valor1;
-                    Console.Write("El residuo de {0}/{1} es: {2} ", valor1, valor2, _raiz);
+                    residuo = valor2 % valor1;
+                    Console.Write("El residuo de {0}/{1} es: {2} ", valor1, valor2, residuo);
                 }
                 else if(opMenu == 2)
                 {
@@ -56,9 +58,9 @@ namespace PROGRAMACION_DE_APP_LOCALES_EJERCICIOS
                     do
                     {
                         Console.WriteLine("[1].`CUADRADO");
-                        Console.WriteLine("[1].`RECTANGULO");
-                        Console.WriteLine("[1].`CIRCULO");
-                        Console.WriteLine("[1].`ROMBO");
+                        Console.WriteLine("[2].`RECTANGULO");
+                        Console.WriteLine("[3].`CIRCULO");
+                        Console.WriteLine("[4].`ROMBO");
                         opArea = Convert.ToInt32(Console.ReadLine());
                         if (opArea == 1)
                         {
@@ -88,10 +90,26 @@ namespace PROGRAMACION_DE_APP_LOCALES_EJERCICIOS
                         else if (opArea == 3)
                         {
                             Console.WriteLine("-------CIRCULO-------");
+                            Console.WriteLine("RADIO DEL CIRCULO: ");
+                            radio = Convert.ToDouble(Console.ReadLine());
+
+                            areaCalCir = _pi * (radio * radio);
+
+                            Console.WriteLine("El area del ciculo es: {0}", areaCalCir);
                         }
                         else if (opArea == 4)
                         {
                             Console.WriteLine("-------ROMBO-------");
+                            Console.WriteLine("DIAGONAL A");
+                            diagonalA = Convert.ToDouble(Console.ReadLine());
+
+                            Console.WriteLine("DIAGONAL B");
+                            diagonalB = Convert.ToDouble(Console.ReadLine());
+
+                            areaCalRom = (diagonalA * diagonalB) / 1;
+
+                            Console.WriteLine("El area calculada del rombo es: {0}", areaCalRom);
+
                         }
                         Console.WriteLine("Desea seleccionar otra calcular otra area? [1]-SI  [2]-NO");
                         opArea = Convert.ToInt32(Console.ReadLine());
@@ -100,11 +118,16 @@ namespace PROGRAMACION_DE_APP_LOCALES_EJERCICIOS
                 }
                 else if(opMenu == 3)
                 {
-                    Console.WriteLine("Selecciono la opcion 3");
+                    Console.WriteLine("-------OBTENER LA RAIZ DE UN VALOR-------");
+
+                    Console.WriteLine("Ingrese el valor para obtener la raiz cuadrada: ");
+                    _raiz = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("la raiz cuadrada de {0} es: {1}", _raiz, Math.Sqrt(_raiz));
+
                 }
                 else if(opMenu == 4)
                 {
-                    Console.WriteLine("Selecciono la opcion 1");
+                    
                 }
                 else if(opMenu == 5)
                 {
