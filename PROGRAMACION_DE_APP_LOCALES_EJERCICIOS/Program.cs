@@ -179,20 +179,39 @@ namespace PROGRAMACION_DE_APP_LOCALES_EJERCICIOS
                             double canDolar = Convert.ToDouble(Console.ReadLine());
 
                             double conversion = canDolar * dolar;
-                            Console.WriteLine("La cantidad de {0} dolares a pesos MXN es de ${1} MXN", canDolar, conversion
+                            Console.WriteLine("La cantidad de {0} Dolares a pesos MXN es de ${1} MXN", canDolar, conversion);
                         }
                         else if (opDiv == 2)
                         {
                             Console.WriteLine("-------EUROS-------");
+                            Console.WriteLine("Ingrese la cantidad en euros: ");
+                            double canEuro = Convert.ToDouble(Console.ReadLine());
+
+                            double conversion = canEuro * euro;
+                            Console.WriteLine("La cantidad de {0} Euros a pesos MXN es de ${1} MXN", canEuro, conversion);
                         }
                         else if (opDiv == 3)
                         {
                             Console.WriteLine("-------LIBRAS-------");
+                            Console.WriteLine("Ingrese la cantidad en libras: ");
+                            double canLibra = Convert.ToDouble(Console.ReadLine());
+
+                            double conversion = canLibra * libra;
+                            Console.WriteLine("La cantidad de {0} Libras a pesos MXN es de ${1} MXN", canLibra, conversion);
                         }
                         else if (opDiv == 4)
                         {
                             Console.WriteLine("-------YEN-------");
+                            Console.WriteLine("Ingrese la cantidad en yen: ");
+                            double canYen = Convert.ToDouble(Console.ReadLine());
+
+                            double conversion = canYen * yen;
+                            Console.WriteLine("La cantidad de {0} Yen a pesos MXN es de ${1} MXN", canYen, conversion);
+
                         }
+
+                        Console.WriteLine("Desea seleccionar otra opcion de conversion [1]-SI [2]-NO");
+                        opDiv = Convert.ToInt32(Console.ReadLine());
 
                     }
                     while (opDiv == 1);
