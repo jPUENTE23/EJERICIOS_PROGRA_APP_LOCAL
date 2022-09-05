@@ -27,8 +27,15 @@ namespace PROGRAMACION_DE_APP_LOCALES_EJERCICIOS
             int _raiz;
 
             // VARIABLES OPCION 4
+            int resultado = 0;
+            int valor = 0;
 
             // VARIABLES OPCION 5
+
+            int opDiv =0;
+
+            double dolar = 19.96, euro = 19.79, libra = 22.89, yen = 0.14;
+
             do
             {
                 Console.WriteLine("[1]. RECIDUO DE DIVISION");
@@ -128,15 +135,72 @@ namespace PROGRAMACION_DE_APP_LOCALES_EJERCICIOS
                 else if(opMenu == 4)
                 {
                     
+                    do
+                    {
+                        Console.WriteLine("Ingrese un valor: ");
+                        valor = Convert.ToInt32(Console.ReadLine());
+
+                        resultado = valor + resultado;
+
+                        Console.WriteLine(resultado);
+
+                    }
+                    while (valor != 0);
+                    /*for (int i = 0; i < 30; i++)
+                    {
+                        //Almacenamos el valor v1 en una variable temporal para no perderlo.
+                        int temp = v1;
+
+                        //El valor 1 se convierte en el valor 2.
+                        v1 = v2;
+
+                        //Sumamos los valores.
+                        v2 = temp + v1;
+
+                        //Mostramos por pantalla el resultado. 
+                        Console.WriteLine(v2);
+                    }*/
                 }
                 else if(opMenu == 5)
                 {
+
+                    do
+                    {
+                        Console.WriteLine("[1]. DOLARES");
+                        Console.WriteLine("[2]. EUROS");
+                        Console.WriteLine("[3]. LIBRAS");
+                        Console.WriteLine("[4]. YEN");
+                        opDiv = Convert.ToInt32(Console.ReadLine());
+
+                        if (opDiv == 1)
+                        {
+                            Console.WriteLine("-------DOLARES-------");
+                            Console.WriteLine("Ingrese la cantidad en dolares: ");
+                            double canDolar = Convert.ToDouble(Console.ReadLine());
+
+                            double conversion = canDolar * dolar;
+                            Console.WriteLine("La cantidad de {0} dolares a pesos MXN es de ${1} MXN", canDolar, conversion
+                        }
+                        else if (opDiv == 2)
+                        {
+                            Console.WriteLine("-------EUROS-------");
+                        }
+                        else if (opDiv == 3)
+                        {
+                            Console.WriteLine("-------LIBRAS-------");
+                        }
+                        else if (opDiv == 4)
+                        {
+                            Console.WriteLine("-------YEN-------");
+                        }
+
+                    }
+                    while (opDiv == 1);
 
                 }
 
                 Console.WriteLine("Desea seleccionar otra opcion? [1]-SI  [2]-NO");
                 op = Convert.ToInt32(Console.ReadLine());
-                // newOp = op;
             }
             while (op == 1);
             Console.WriteLine("El proceos ah terminado");
